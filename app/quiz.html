@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Quiz: Help Samira</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <!-----------HEADER (OPEN)------------->
+<div class="header">
+    <img src="https://cdn.glitch.global/a2fbb7fc-8e40-47c0-8615-24dba1a32875/PhishProof%20Logo%20Dark.png?v=1731365104960" id="Logo" alt="PhishProof Logo">
+    <div class = "header-buttons">
+        <a href = "index.html">
+            <button id="Home">Home</button> </a>
+        <a href = "glossary.html">
+            <button id="Glossary">Glossary</button> </a>
+      <a href = "quiz.html">
+      <button id="Quiz">Quiz</button></a>
+    </div>
+</div>
+<!-----------HEADER (CLOSED)----------->
+  <button onclick="window.location.href='index.html'" id="back-button">← Back</button>    <div id="quiz-container">
+        <h1>Cybersecurity Quiz: Help Samira!</h1>
+        <p id="level-info">Level: Easy</p>
+
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="options"></div>
+        </div>
+
+        <p id="score">Score: <span id="score-count">0</span></p>
+        <p id="levels-passed">Levels Passed: <span id="levels-passed-count">0</span></p>
+        <button id="next-button" class="hidden" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Permanent Restart Button -->
+    <div id="restart-container">
+        <button id="restart-quiz" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

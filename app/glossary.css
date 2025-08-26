@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+  background-color: #011126;
+  margin: 0 85px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media(min-width:961px) and  (min-width:1025px) and (min-width:1281px){
+  
+}
+
+.header {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  margin: 48px 0 124px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#Logo {
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.header-buttons button {
+  font-weight: 600;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  flex: 1 1 auto;
+}
+
+.resources {
+  user-select: none;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#resources-header {
+  user-select: none;
+  font-weight: 700;
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.glossary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flashcard Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 420px); /* Exactly 3 columns of 420px each */
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  height: 265px;
+  width: 420px;
+  position: relative;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+}
+
+/* Position the 7th card under the 5th card */
+.card:nth-child(7) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  overflow: hidden; /* Ensure gradient stays within borders */
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(237, 242, 244, 0.058);
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://cdn.glitch.global/a2fbb7fc-8e40-47c0-8615-24dba1a32875/flashcard-blur.png?v=1731365091295"); /* Replace with your gradient PNG path */
+  background-size: 250%;
+  background-position: center;
+  z-index: 1; /* Above the background, below the text */
+  border-radius: 2rem; /* Match card border radius */
+  pointer-events: none;
+}
+
+.front {
+  z-index: 2;
+  color: #ffffff;
+}
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.front-text {
+  color: #11d9c5;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.back-text {
+  color: white;
+  font-size: 20px;
+}
+.front-text,
+.back-text {
+  z-index: 2;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+  text-align: center;
+  max-width: 90%;
+  word-wrap: break-word;
+  overflow: hidden;
+}

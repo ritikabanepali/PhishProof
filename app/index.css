@@ -1,0 +1,286 @@
+/* Reset Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set minimum width for the entire page */
+html {
+  min-width: 1280px; /* Set this to your desired minimum width */
+  overflow-x: auto; /* Enables horizontal scrolling when needed */
+}
+
+/* General Styles */
+body {
+  background-color: #011126;
+  width: 100%;
+  min-width: 1280px; /* Match html min-width */
+  margin: 0;
+  padding: 0 85px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  body{
+    overflow-x: hidden;
+  }
+}
+
+.header {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  margin: 48px 0 124px;
+  gap: 20px;
+  width: 100%;
+  min-width: 1110px; /* Minimum width to maintain layout */
+}
+
+#Logo {
+  height: 110px;
+  flex-shrink: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.header-buttons button {
+  font-weight: 600;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.welcome {
+  user-select: none;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 108px;
+  width: 100%;
+  min-width: 1110px; /* Minimum width to maintain layout */
+}
+
+.landing-png {
+  position: absolute;
+  max-height: 70%;
+  min-height: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .landing-png {
+    top: 185px;
+    height: 50%;
+    right: -30px;
+  }
+}
+
+@media(min-width:1281px) and (min-width:1025px) and (min-width:961px) {
+  .landing-png{
+    top: 185px;
+    right: 40px;
+    height: 70%;
+    width: auto;
+  }
+}
+
+
+
+.ellipse-background{
+  position: absolute;
+  top: -217px;
+  right: -15%;
+  height: 150%;
+  width: 62%;
+  z-index: -1;
+}
+
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px; /* Restrict max width for better consistency */
+  min-width: 1110px; /* To prevent extreme shrinking */
+  height: 600px; /* Maintain a fixed height */
+  margin: 0 auto; /* Center the container */
+}
+
+
+#welcome-header,
+#cfs-header {
+  user-select: none;
+  margin-bottom: 44px;
+  font-weight: 700;
+  font-size: 45px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+#welcome-blurb {
+  width: 689px; /* Fixed width instead of max-width */
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+/* Button styling */
+.lets-get-started-button, .search-button {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  border-radius: 93px;
+}
+
+.lets-get-started-button img, .search-button img {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lgs-text, .search-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #011126;
+  white-space: nowrap;
+}
+
+.search-text{
+  color: #0F53BC;
+}
+
+.search-button{
+  margin-top: -55px;
+  margin-left: 10px;
+}
+
+#cfs-blurb {
+  margin-left: 15px;
+  user-select: none;
+  max-width: 726px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.cfs-input {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  max-width: 680px;
+}
+
+.cfs-input textarea,
+.cfs-input input {
+  user-select: text;
+  pointer-events: auto;
+  border: 0;
+  outline: 0;
+  background: rgba(237, 242, 244, 0.1);
+  padding: 15px 18px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.cfs-input textarea::placeholder,
+.cfs-input input::placeholder {
+  color: #ffffff;
+  font-weight: 700;
+  opacity: 1;
+  font-size: 15px;
+}
+
+#senderID-input {
+  width: 276px;
+  height: 61px;
+  max-width: 100%;
+  color: white;
+  font-size: 15px;
+}
+
+#sms-input {
+  height: 183px;
+  width: 500px;
+  max-width: 100%;
+  overflow-y: auto;
+  font-size: 15px;
+  color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+.stc-box {
+  text-align: center;
+  margin-top: -400px;
+  margin-left: 63%;
+  background: rgba(237, 242, 244, 0.1);
+  padding: 20px; /* Padding around the container content */
+  max-width: 100%;
+  width: 350pt; /* Adjusted width to fit content */
+  height: auto; /* Allow height to grow based on content */
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#stc-title {
+  font-size: 20px;
+  margin-bottom: 15px; /* Space between title and first blurb */
+  text-align: center;
+  color: #ffffff;
+}
+
+.stc-blurb {
+  color: #000000;
+  font-weight: 700;
+  background-color: #eceadb;
+  padding: 15px; /* Inner padding for the text */
+  margin: 10px auto; /* Margin to space each item */
+  width: 90%; /* Width set to percentage for responsiveness */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.end-box {
+  margin: 30px auto; /* Centers the box horizontally and adds top margin */
+  padding: 15px;
+  width: 130%;
+  max-width: 800px; /* Optional: limits the box width on larger screens */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content vertically */
+  text-align: center;
+}
+
+
+.end-box p{
+  color: white;
+  font-size: 15px;
+}
+
+.end-box #gwc-logo{
+  height: 50px;
+  width: auto;
+}
+

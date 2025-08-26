@@ -1,0 +1,140 @@
+/* Updated colors from the palette for a lighter theme */
+:root {
+    --light-green: #FDF9F8;
+    --medium-green: #5FA778;
+    --blue: #0F53BC;
+    --light-blue: #B2D1EE;
+    --pink: #F5CBD5;
+    --brown: #A1520B;
+    --dark-blue: #2C3E50;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--light-blue); /* Lighter background */
+    color: var(--dark-blue); /* Darker contrast text */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    margin: 48px 0 124px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#Logo {
+    height: 110px;
+    flex-shrink: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.header-buttons button {
+    font-weight: 600;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    flex: 1 1 auto;
+}
+
+.quiz-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--light-green); /* Lightened background for container */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2); /* Softer shadow */
+}
+
+h1 {
+    color: var(--blue); /* Strong blue for headings */
+}
+
+#question-container {
+    margin-top: 20px;
+}
+
+#options {
+    text-align: center; /* Center the options container */
+}
+
+#options button {
+    display: block; /* Make buttons block-level elements */
+    width: 100%; /* Ensure buttons take up the full width */
+    max-width: 400px; /* Limit the max width of the buttons */
+    margin: 10px auto; /* Center the buttons and add vertical space */
+    background-color: var(--blue);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+#options button:hover {
+    background-color: var(--pink); /* Pink hover effect */
+}
+
+button {
+    background-color: var(--blue); /* Strong blue buttons */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--medium-green); /* Medium green hover effect */
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--brown); /* Use brown to distinguish score */
+}
+
+#levels-passed {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--brown); 
+}
+
+/* Restart button */
+#restart-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+#restart-quiz {
+    background-color: var(--blue);
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restart-quiz:hover {
+    background-color: var(--medium-green);
+}
